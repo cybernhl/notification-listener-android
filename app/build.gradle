@@ -19,9 +19,14 @@ licenseReport {
 android {
     compileSdk 35
 
+    buildFeatures {
+        viewBinding true
+    }
+
     defaultConfig {
-        resourceConfigurations += ['en', 'it-rIT']
+        namespace 'com.android.alftendev'
         applicationId "com.alftendev.notlistener"
+        resourceConfigurations += ['en', 'it-rIT']
         minSdk 24
         targetSdk 35
         versionCode 31
@@ -45,12 +50,7 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = '17'
-    }
-
-    namespace 'com.android.alftendev'
-    buildFeatures {
-        viewBinding true
+        jvmTarget = JavaVersion.VERSION_17.toString()
     }
 }
 
